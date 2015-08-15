@@ -5,13 +5,13 @@ public class ShootBehavior {
 	public float delay;
 	public int clipSize;
 	public int projectiles;
-	public float damagePerProjectile; //For example shotguns shoot multiple projectiles
+	public int damagePerProjectile; //For example shotguns shoot multiple projectiles
 	public float reloadTime;
 	public float range;
 	public bool auto;
 	public bool fire;
 
-	public ShootBehavior(float delay, int clipSize,int projectiles, float damagePerProjectile, float reloadTime,float range, bool auto, bool fire){
+	public ShootBehavior(float delay, int clipSize,int projectiles, int damagePerProjectile, float reloadTime,float range, bool auto, bool fire){
 		this.delay = delay;
 		this.clipSize = clipSize;
 		this.damagePerProjectile = damagePerProjectile;
