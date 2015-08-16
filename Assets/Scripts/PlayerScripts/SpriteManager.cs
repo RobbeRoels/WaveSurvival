@@ -23,6 +23,11 @@ public class SpriteManager : MonoBehaviour {
 			}
 			GetComponent<SpriteRenderer>().sprite = availableSprites[currentSprite];
 			GetComponentInChildren<FightBehavior>().sBehavior = shootMap.behavior[currentSprite];
+			GetComponentInChildren<FightBehavior>().ammoSlider.maxValue = GetComponentInChildren<FightBehavior>().sBehavior.clipSize;
+			GetComponentInChildren<FightBehavior>().ammoSlider.value = GetComponentInChildren<FightBehavior>().sBehavior.currentClip;
+			GetComponentInChildren<FightBehavior>().ammoText.text = GetComponentInChildren<FightBehavior>().sBehavior.currentClip + "";
+			GetComponentInChildren<FightBehavior>().reloading = false;
+			GetComponentInChildren<FightBehavior>().reloadTimer = 0.0f;
 		} else if (mouseWheel > 0) {
 			currentSprite--;
 			if(currentSprite < 0){
@@ -30,6 +35,12 @@ public class SpriteManager : MonoBehaviour {
 			}
 			GetComponent<SpriteRenderer>().sprite = availableSprites[currentSprite];
 			GetComponentInChildren<FightBehavior>().sBehavior = shootMap.behavior[currentSprite];
+			GetComponentInChildren<FightBehavior>().sBehavior = shootMap.behavior[currentSprite];
+			GetComponentInChildren<FightBehavior>().ammoSlider.maxValue = GetComponentInChildren<FightBehavior>().sBehavior.clipSize;
+			GetComponentInChildren<FightBehavior>().ammoSlider.value = GetComponentInChildren<FightBehavior>().sBehavior.currentClip;
+			GetComponentInChildren<FightBehavior>().ammoText.text = GetComponentInChildren<FightBehavior>().sBehavior.currentClip + "";
+			GetComponentInChildren<FightBehavior>().reloading = false;
+			GetComponentInChildren<FightBehavior>().reloadTimer = 0.0f;
 		}
 
 

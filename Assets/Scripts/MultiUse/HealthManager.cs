@@ -8,6 +8,7 @@ public class HealthManager : MonoBehaviour {
 	public int maxHealth = 150;
 	public int health;
 	public Slider healthSlider;
+	public Text healthText;
 	public void Awake(){
 		health = maxHealth;
 	}
@@ -16,6 +17,7 @@ public class HealthManager : MonoBehaviour {
 		health -= damage;
 		if (healthSlider != null) {
 			healthSlider.value = health;
+			healthText.text = health + "";
 		}
 	}
 }
